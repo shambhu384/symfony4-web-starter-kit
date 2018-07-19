@@ -1,0 +1,42 @@
+version: '2'
+
+services:
+    web:
+        image: nginx:latest
+        ports:
+            - "9002:80"
+        volumes:
+            - ./:/code
+            - ./site.conf:/etc/nginx/conf.d/default.conf
+        depends_on:
+            - php
+            - mysqldb
+
+    php:
+        image: shambhu384/php:fpm7-mysqli
+        volumes:
+            - ./:/code
+            - ./:/apigen
+        links:
+            - mysqldb
+
+    composer:
+       image: composer:latest
+       working_dir: /code
+       volumes:
+           - ./:/code
+       command:
+           - update
+    mysqldb:
+        image: mysql
+        restart: always
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=sfapp
+            - MYSQL_USER=user
+            - MYSQL_PASSWORD=user
+        restart: 'always'
+        ports:
+            - "8988:3306"
+        volumes:
+            - "./data/db/mysql:/var/lib/mysql"
