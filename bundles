@@ -1,0 +1,5 @@
+ composer require sensiolabs/security-checker --dev
+ composer require annotations
+ composer require symfony/security-bundle
+ composer require friendsofsymfony/user-bundle "~2.0"
+

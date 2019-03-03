@@ -1,0 +1,31 @@
+
+<section id="our-skill" class="section" style="background: #f9f9f9;">
+		<div class="container">
+			<div class="row"> 
+				<div class="col-md-9 col-sm-12 col-xs-12">
+    <p style="
+    padding: 10px 0px;
+    font-weight: 800;
+    color: #4f5851;
+">WANT TO WORK</p>
+<p style="
+    font-weight: 800;
+    padding: 7px 0px;
+">WITH US?</p>
+</div>
+<div class="col-md-3 col-sm-12 col-xs-12" style="
+    padding: 22px 0px;
+    /* background-color: #dddd; */
+">
+    <a href="/hire" class="btn btn-primary" style="
+    font-size: 15pt;
+    background-color: #16a085;
+    border-color: #71c981;
+    padding: 11px 49px;
+    font-weight: 600;
+    color: #07735e;
+">Let's talk</a>
+</div>
+			</div>
+		</div>
+	</section>
